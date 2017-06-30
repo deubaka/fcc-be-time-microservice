@@ -4,6 +4,13 @@ var app = express();
 var moment = require('moment');
 moment().format();
 
+app.get('/', function(req, res) { 
+    res.json({
+      unix : null,
+      natural : null
+    });
+});
+
 app.get('/:time', function(req, res) {  
   if (req.params.hasOwnProperty('time')) {    
     var time = req.params.time;
@@ -22,7 +29,7 @@ app.get('/:time', function(req, res) {
       res.json({
         unix : parsedDate.unix(),
         natural : parsedDate.format('MMMM D, YYYY')
-      })
+      });
     } else {
       return res.end('Invalid date');
     }
@@ -30,7 +37,7 @@ app.get('/:time', function(req, res) {
     res.json({
       unix : null,
       natural : null
-    })
+    });
   }
-})
+});
 app.listen(process.env.PORT);
