@@ -1,0 +1,18 @@
+{
+  "name": "fcc-be-time-microservice",
+  "dependencies": {
+    "express": "^4.15.3",
+    "moment": "^2.18.1"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "4.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://idontknow/todo.git"
+  }
+}
